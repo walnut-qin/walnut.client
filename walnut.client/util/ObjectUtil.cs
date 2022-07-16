@@ -20,7 +20,7 @@ namespace walnut.client.util
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public static string toJson(this object obj)
+        public static string toJson(this Object obj)
         {
             return JsonConvert.SerializeObject(obj, Formatting.Indented, dateTimeConverter);
         }
@@ -30,7 +30,7 @@ namespace walnut.client.util
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
-        public static string toXml(this object obj)
+        public static string toXml(this Object obj)
         {
             return JsonConvert.DeserializeXmlNode(toJson(obj)).InnerXml;
         }

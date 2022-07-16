@@ -42,14 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="net\RestTemplate.cs" />
+    <Compile Include="net\RspWrapper.cs" />
     <Compile Include="util\EnumUtil.cs" />
     <Compile Include="util\ObjectUtil.cs" />
     <Compile Include="util\StringUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="net\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
