@@ -1,0 +1,9 @@
+# vscode file
+.vs
+
+# bin
+bin
+obj
+
+# target
+target
