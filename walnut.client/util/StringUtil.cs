@@ -19,34 +19,34 @@ namespace walnut.client.util
         /// <summary>
         /// 获取字节码
         /// </summary>
-        /// <param name="source">原始字符串</param>
+        /// <param name="s">原始字符串</param>
         /// <returns>字节码数组</returns>
-        public static Byte[] getBytes(this String source)
+        public static Byte[] getBytes(this String s)
         {
-            return Encoding.UTF8.GetBytes(source);
+            return Encoding.UTF8.GetBytes(s);
         }
 
         /// <summary>
         /// 转为数值
         /// </summary>
-        /// <param name="source">原始字符串</param>
+        /// <param name="s">原始字符串</param>
         /// <returns>转换目标</returns>
-        public static Decimal toDecimal(this String source)
+        public static Decimal toDecimal(this String s)
         {
-            return Decimal.Parse(source);
+            return Decimal.Parse(s);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="source"></param>
+        /// <param name="s"></param>
         /// <param name="defaultValue">默认值，若转换失败，返回该值</param>
         /// <returns></returns>
-        public static Decimal toDecimal(this String source, Decimal defaultValue)
+        public static Decimal toDecimal(this String s, Decimal defaultValue)
         {
             try
             {
-                return source.toDecimal();
+                return s.toDecimal();
             }
             catch (System.Exception)
             {
@@ -57,30 +57,30 @@ namespace walnut.client.util
         /// <summary>
         /// 转换为枚举
         /// </summary>
-        /// <param name="source">原始字符串</param>
+        /// <param name="s">原始字符串</param>
         /// <param name="converter">转换器</param>
         /// <returns></returns>
-        public static Enum toEnum(this String source, Converter<String, Enum> converter)
+        public static Enum toEnum(this String s, Converter<String, Enum> converter)
         {
             if (converter == null)
             {
                 throw new Exception("转换器不能为空");
             }
-            return converter.Invoke(source);
+            return converter.Invoke(s);
         }
 
         /// <summary>
         /// 转换为枚举
         /// </summary>
-        /// <param name="source">原始字符串</param>
+        /// <param name="s">原始字符串</param>
         /// <param name="converter">转换器</param>
         /// <param name="defaultValue">默认值</param>
         /// <returns></returns>
-        public static Enum toEnum(this String source, Converter<String, Enum> converter, Enum defaultValue)
+        public static Enum toEnum(this String s, Converter<String, Enum> converter, Enum defaultValue)
         {
             try
             {
-                return source.toEnum(converter);
+                return s.toEnum(converter);
             }
             catch (System.Exception)
             {
@@ -91,24 +91,24 @@ namespace walnut.client.util
         /// <summary>
         /// 转为数值
         /// </summary>
-        /// <param name="source">原始字符串</param>
+        /// <param name="s">原始字符串</param>
         /// <returns>转换目标</returns>
-        public static DateTime toDateTime(this String source)
+        public static DateTime toDateTime(this String s)
         {
-            return DateTime.Parse(source);
+            return DateTime.Parse(s);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="source"></param>
+        /// <param name="s"></param>
         /// <param name="defaultValue">默认值，若转换失败，返回该值</param>
         /// <returns></returns>
-        public static DateTime toDateTime(this String source, DateTime defaultValue)
+        public static DateTime toDateTime(this String s, DateTime defaultValue)
         {
             try
             {
-                return source.toDateTime();
+                return s.toDateTime();
             }
             catch (System.Exception)
             {
@@ -119,11 +119,11 @@ namespace walnut.client.util
         /// <summary>
         /// 转为数值
         /// </summary>
-        /// <param name="source">原始字符串</param>
+        /// <param name="s">原始字符串</param>
         /// <returns>转换目标</returns>
-        public static T toJson<T>(this String source)
+        public static T toJson<T>(this String s)
         {
-            return JsonConvert.DeserializeObject<T>(source, dateTimeConverter);
+            return JsonConvert.DeserializeObject<T>(s, dateTimeConverter);
         }
 
         /// <summary>
@@ -132,11 +132,11 @@ namespace walnut.client.util
         /// <param name="s"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T toJson<T>(this string source, T defaultValue)
+        public static T toJson<T>(this string s, T defaultValue)
         {
             try
             {
-                return source.toJson<T>();
+                return s.toJson<T>();
             }
             catch (Exception)
             {
@@ -147,13 +147,13 @@ namespace walnut.client.util
         /// <summary>
         /// 转为数值
         /// </summary>
-        /// <param name="source">原始字符串</param>
+        /// <param name="s">原始字符串</param>
         /// <returns>转换目标</returns>
-        public static T toXml<T>(this String source)
+        public static T toXml<T>(this String s)
         {
             // 加载xml字符串
             var xmlDocument = new XmlDocument();
-            xmlDocument.LoadXml(source);
+            xmlDocument.LoadXml(s);
             String jsonString = JsonConvert.SerializeXmlNode(xmlDocument);
 
             // 反序列化
@@ -166,11 +166,11 @@ namespace walnut.client.util
         /// <param name="s"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public static T toXml<T>(this string source, T defaultValue)
+        public static T toXml<T>(this string s, T defaultValue)
         {
             try
             {
-                return source.toXml<T>();
+                return s.toXml<T>();
             }
             catch (Exception)
             {
@@ -181,31 +181,31 @@ namespace walnut.client.util
         /// <summary>
         /// base64加密
         /// </summary>
-        /// <param name="source"></param>
+        /// <param name="s"></param>
         /// <returns></returns>
-        public static String base64Encode(this string source)
+        public static String base64Encode(this string s)
         {
-            if (string.IsNullOrEmpty(source))
+            if (string.IsNullOrEmpty(s))
             {
                 return string.Empty;
             }
 
-            return Convert.ToBase64String(source.getBytes());
+            return Convert.ToBase64String(s.getBytes());
         }
 
         /// <summary>
         /// base64解密
         /// </summary>
-        /// <param name="source"></param>
+        /// <param name="s"></param>
         /// <returns></returns>
-        public static String base64Decode(this string source)
+        public static String base64Decode(this string s)
         {
-            if (string.IsNullOrEmpty(source))
+            if (string.IsNullOrEmpty(s))
             {
                 return string.Empty;
             }
 
-            return Encoding.UTF8.GetString(Convert.FromBase64String(source));
+            return Encoding.UTF8.GetString(Convert.FromBase64String(s));
         }
     }
 }

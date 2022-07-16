@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="util\EnumUtil.cs" />
+    <Compile Include="util\ObjectUtil.cs" />
     <Compile Include="util\StringUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
