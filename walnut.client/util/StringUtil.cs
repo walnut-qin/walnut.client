@@ -110,7 +110,7 @@ namespace walnut.client.util
         /// <param name="s">原始字符串</param>
         /// <param name="converter">转换器</param>
         /// <returns></returns>
-        public static T toObject<T>(this String s, Converter<String, T> converter) where T : class
+        public static T toObject<T>(this String s, Converter<String, T> converter)
         {
             if (converter == null)
             {
@@ -126,7 +126,7 @@ namespace walnut.client.util
         /// <param name="converter">转换器</param>
         /// <param name="defaultValue">默认值</param>
         /// <returns></returns>
-        public static T toObject<T>(this String s, Converter<String, T> converter, T defaultValue) where T : class
+        public static T toObject<T>(this String s, Converter<String, T> converter, T defaultValue)
         {
             try
             {
