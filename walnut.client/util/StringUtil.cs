@@ -54,7 +54,7 @@ namespace walnut.client.util
         /// <param name="s">原始字符串</param>
         /// <param name="converter">转换器</param>
         /// <returns></returns>
-        public static Enum toEnum(this String s, Converter<String, Enum> converter)
+        public static T toEnum<T>(this String s, Converter<String, T> converter) where T : System.Enum
         {
             if (converter == null)
             {
@@ -70,7 +70,7 @@ namespace walnut.client.util
         /// <param name="converter">转换器</param>
         /// <param name="defaultValue">默认值</param>
         /// <returns></returns>
-        public static Enum toEnum(this String s, Converter<String, Enum> converter, Enum defaultValue)
+        public static T toEnum<T>(this String s, Converter<String, T> converter, T defaultValue) where T : System.Enum
         {
             try
             {
