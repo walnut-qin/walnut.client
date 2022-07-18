@@ -4,18 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using Swifter.Json;
 
 namespace walnut.client.util
 {
     public static class StringUtil
     {
-        /// <summary>
-        /// 时间格式化转换器
-        /// </summary>
-        static IsoDateTimeConverter dateTimeConverter = new IsoDateTimeConverter { DateTimeFormat = "yyyy-MM-dd HH:mm:ss" };
-
         /// <summary>
         /// 获取字节码
         /// </summary>
@@ -123,7 +117,7 @@ namespace walnut.client.util
         /// <returns>转换目标</returns>
         public static T toJson<T>(this String s)
         {
-            return JsonConvert.DeserializeObject<T>(s, dateTimeConverter);
+            return JsonFormatter.DeserializeObject<T>(s);
         }
 
         /// <summary>
@@ -137,40 +131,6 @@ namespace walnut.client.util
             try
             {
                 return s.toJson<T>();
-            }
-            catch (Exception)
-            {
-                return default(T);
-            }
-        }
-
-        /// <summary>
-        /// 转为数值
-        /// </summary>
-        /// <param name="s">原始字符串</param>
-        /// <returns>转换目标</returns>
-        public static T toXml<T>(this String s)
-        {
-            // 加载xml字符串
-            var xmlDocument = new XmlDocument();
-            xmlDocument.LoadXml(s);
-            String jsonString = JsonConvert.SerializeXmlNode(xmlDocument);
-
-            // 反序列化
-            return JsonConvert.DeserializeObject<T>(jsonString, dateTimeConverter);
-        }
-
-        /// <summary>
-        /// 将json字符串转为对象
-        /// </summary>
-        /// <param name="s"></param>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
-        public static T toXml<T>(this string s, T defaultValue)
-        {
-            try
-            {
-                return s.toXml<T>();
             }
             catch (Exception)
             {
