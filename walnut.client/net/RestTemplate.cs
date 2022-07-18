@@ -85,6 +85,9 @@ namespace walnut.client.net
             request.Headers.Add("Token", token);
             request.Headers.Add("FakeUser", user);
 
+            // 写入contentType
+            request.ContentType = "application/json;charset=UTF-8";
+
             // 构造body
             var data = body.toJson().getBytes();
             request.ContentLength = data.Length;
