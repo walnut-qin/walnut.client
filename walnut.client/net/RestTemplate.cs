@@ -83,6 +83,7 @@ namespace walnut.client.net
 
             // 写入Header
             request.Headers.Add("Token", token);
+            request.Headers.Add("FakeUser", user);
 
             // 构造body
             var data = body.toJson().getBytes();
