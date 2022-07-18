@@ -40,7 +40,7 @@ namespace walnut.client.net
         /// <param name="uriVars"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public RspWrapper<T> get<T>(String url, Object[] uriVars)
+        public RspWrapper<T> get<T>(String url, Object[] uriVars) where T : class
         {
             // 创建Http请求
             var request = WebRequest.Create("http://172.16.100.252" + String.Format(url, uriVars));
@@ -72,7 +72,7 @@ namespace walnut.client.net
         /// <typeparam name="S"></typeparam>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public RspWrapper<T> post<T>(String url, Object body)
+        public RspWrapper<T> post<T>(String url, Object body) where T : class
         {
             // 创建Http请求
             var request = WebRequest.Create("http://172.16.100.252" + url);

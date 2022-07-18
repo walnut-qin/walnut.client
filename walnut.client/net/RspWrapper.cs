@@ -8,21 +8,21 @@ namespace walnut.client.net
     /// <summary>
     /// 响应包装器
     /// </summary>
-    public class RspWrapper<T>
+    public class RspWrapper<T> where T : class
     {
         /// <summary>
         /// 响应码
         /// </summary>
-        int code { get; set; }
+        public int code { get; set; } = 0;
 
         /// <summary>
         /// 错误原因
         /// </summary>
-        String message { get; set; }
+        public String message { get; set; } = null;
 
         /// <summary>
         /// 响应数据
         /// </summary>
-        T data { get; set; }
+        public T data { get; set; } = null;
     }
 }
