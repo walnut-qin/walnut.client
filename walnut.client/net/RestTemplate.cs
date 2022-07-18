@@ -17,7 +17,21 @@ namespace walnut.client.net
         /// <summary>
         /// token
         /// </summary>
-        static readonly String token = String.Empty;
+        static readonly String token = "walnut";
+
+        /// <summary>
+        /// 用户
+        /// </summary>
+        readonly String user;
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="user"></param>
+        public RestTemplate(String user)
+        {
+            this.user = user;
+        }
 
         /// <summary>
         /// GET请求
@@ -37,6 +51,7 @@ namespace walnut.client.net
 
             // 写入Header
             request.Headers.Add("Token", token);
+            request.Headers.Add("FakeUser", user);
 
             // 获取响应
             var webResponse = request.GetResponse() as HttpWebResponse;
