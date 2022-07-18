@@ -49,40 +49,6 @@ namespace walnut.client.util
         }
 
         /// <summary>
-        /// 转换为枚举
-        /// </summary>
-        /// <param name="s">原始字符串</param>
-        /// <param name="converter">转换器</param>
-        /// <returns></returns>
-        public static T toEnum<T>(this String s, Converter<String, T> converter) where T : System.Enum
-        {
-            if (converter == null)
-            {
-                throw new Exception("转换器不能为空");
-            }
-            return converter.Invoke(s);
-        }
-
-        /// <summary>
-        /// 转换为枚举
-        /// </summary>
-        /// <param name="s">原始字符串</param>
-        /// <param name="converter">转换器</param>
-        /// <param name="defaultValue">默认值</param>
-        /// <returns></returns>
-        public static T toEnum<T>(this String s, Converter<String, T> converter, T defaultValue) where T : System.Enum
-        {
-            try
-            {
-                return s.toEnum(converter);
-            }
-            catch (System.Exception)
-            {
-                return defaultValue;
-            }
-        }
-
-        /// <summary>
         /// 转为数值
         /// </summary>
         /// <param name="s">原始字符串</param>
@@ -135,6 +101,40 @@ namespace walnut.client.util
             catch (Exception)
             {
                 return default(T);
+            }
+        }
+
+        /// <summary>
+        /// 转换为枚举
+        /// </summary>
+        /// <param name="s">原始字符串</param>
+        /// <param name="converter">转换器</param>
+        /// <returns></returns>
+        public static T toObject<T>(this String s, Converter<String, T> converter) where T : class
+        {
+            if (converter == null)
+            {
+                throw new Exception("转换器不能为空");
+            }
+            return converter.Invoke(s);
+        }
+
+        /// <summary>
+        /// 转换为枚举
+        /// </summary>
+        /// <param name="s">原始字符串</param>
+        /// <param name="converter">转换器</param>
+        /// <param name="defaultValue">默认值</param>
+        /// <returns></returns>
+        public static T toObject<T>(this String s, Converter<String, T> converter, T defaultValue) where T : class
+        {
+            try
+            {
+                return s.toObject(converter);
+            }
+            catch (System.Exception)
+            {
+                return defaultValue;
             }
         }
 
