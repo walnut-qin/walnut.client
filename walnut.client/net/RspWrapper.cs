@@ -13,16 +13,16 @@ namespace walnut.client.net
         /// <summary>
         /// 响应码
         /// </summary>
-        int code;
+        int code { get; set; }
 
         /// <summary>
         /// 错误原因
         /// </summary>
-        String message;
+        String message { get; set; }
 
         /// <summary>
         /// 响应数据
         /// </summary>
-        T data;
+        T data { get; set; }
     }
 }
