@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="net\RestTemplate.cs" />
     <Compile Include="net\RspWrapper.cs" />
+    <Compile Include="util\collection\Dictionary.cs" />
     <Compile Include="util\EnumUtil.cs" />
     <Compile Include="util\ObjectUtil.cs" />
     <Compile Include="util\StringUtil.cs" />

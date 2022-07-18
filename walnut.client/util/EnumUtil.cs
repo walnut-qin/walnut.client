@@ -14,7 +14,7 @@ namespace walnut.client.util
         /// </summary>
         /// <param name="e"></param>
         /// <returns></returns>
-        public static string GetDescription(this Enum e)
+        public static string getDescription(this Enum e)
         {
             FieldInfo field = e.GetType().GetField(e.ToString());
             object[] obj = field.GetCustomAttributes(typeof(DescriptionAttribute), false);
