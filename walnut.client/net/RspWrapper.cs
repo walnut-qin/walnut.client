@@ -8,7 +8,7 @@ namespace walnut.client.net
     /// <summary>
     /// 响应包装器
     /// </summary>
-    public class RspWrapper<T> where T : class
+    public class RspWrapper<T>
     {
         /// <summary>
         /// 响应码
@@ -23,6 +23,6 @@ namespace walnut.client.net
         /// <summary>
         /// 响应数据
         /// </summary>
-        public T data { get; set; } = null;
+        public T data { get; set; } = default(T);
     }
 }

@@ -22,6 +22,11 @@ namespace walnut.client.net
         /// <summary>
         /// 用户
         /// </summary>
+        readonly String host = "http://172.16.100.252";
+
+        /// <summary>
+        /// 用户
+        /// </summary>
         readonly String user;
 
         /// <summary>
@@ -40,10 +45,10 @@ namespace walnut.client.net
         /// <param name="uriVars"></param>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public RspWrapper<T> get<T>(String url, params Object[] uriVars) where T : class
+        public RspWrapper<T> get<T>(String url, params Object[] uriVars)
         {
             // 创建Http请求
-            var request = WebRequest.Create("http://172.16.100.252" + String.Format(url, uriVars));
+            var request = WebRequest.Create(this.host + String.Format(url, uriVars));
 
             // 设置参数
             request.Method = "GET";
@@ -72,10 +77,10 @@ namespace walnut.client.net
         /// <typeparam name="S"></typeparam>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public RspWrapper<T> post<T>(String url, Object body) where T : class
+        public RspWrapper<T> post<T>(String url, Object body)
         {
             // 创建Http请求
-            var request = WebRequest.Create("http://172.16.100.252" + url);
+            var request = WebRequest.Create(this.host + url);
 
             // 设置参数
             request.Method = "POST";
