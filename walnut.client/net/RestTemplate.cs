@@ -39,6 +39,15 @@ namespace walnut.client.net
         }
 
         /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="user"></param>
+        public RestTemplate(String host, String user) : this(user)
+        {
+            this.host = host;
+        }
+
+        /// <summary>
         /// GET请求
         /// </summary>
         /// <param name="url"></param>
