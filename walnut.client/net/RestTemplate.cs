@@ -57,6 +57,7 @@ namespace walnut.client.net
             // 写入Header
             request.Headers.Add("Token", token);
             request.Headers.Add("FakeUser", user);
+            request.Headers.Add("W-Token", "walnut-" + user);
 
             // 获取响应
             var webResponse = request.GetResponse() as HttpWebResponse;
@@ -89,6 +90,7 @@ namespace walnut.client.net
             // 写入Header
             request.Headers.Add("Token", token);
             request.Headers.Add("FakeUser", user);
+            request.Headers.Add("W-Token", "walnut-" + user);
 
             // 写入contentType
             request.ContentType = "application/json;charset=UTF-8";
