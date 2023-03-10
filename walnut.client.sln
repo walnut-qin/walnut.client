@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "walnut.client", "walnut.client\walnut.client.csproj", "{EE572466-BB2C-46A1-9078-636AA3AA202E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulator", "Simulator\Simulator.csproj", "{1CA15A3F-5CD5-462D-9155-898EED928800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EE572466-BB2C-46A1-9078-636AA3AA202E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE572466-BB2C-46A1-9078-636AA3AA202E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE572466-BB2C-46A1-9078-636AA3AA202E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CA15A3F-5CD5-462D-9155-898EED928800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CA15A3F-5CD5-462D-9155-898EED928800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CA15A3F-5CD5-462D-9155-898EED928800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CA15A3F-5CD5-462D-9155-898EED928800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
