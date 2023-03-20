@@ -178,7 +178,7 @@
             namedStyle4});
             this.fp.Sheets.AddRange(new FarPoint.Win.Spread.SheetView[] {
             this.fpSheet});
-            this.fp.Size = new System.Drawing.Size(367, 352);
+            this.fp.Size = new System.Drawing.Size(369, 352);
             spreadSkin1.ColumnHeaderDefaultStyle = namedStyle1;
             spreadSkin1.CornerDefaultStyle = namedStyle3;
             spreadSkin1.DefaultStyle = namedStyle4;
@@ -242,7 +242,7 @@
             this.gpx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gpx.Location = new System.Drawing.Point(0, 0);
             this.gpx.Name = "gpx";
-            this.gpx.Size = new System.Drawing.Size(375, 400);
+            this.gpx.Size = new System.Drawing.Size(377, 400);
             this.gpx.TabIndex = 1;
             this.gpx.TabStop = false;
             this.gpx.Text = "标题";
@@ -254,7 +254,7 @@
             this.pnl2.Location = new System.Drawing.Point(3, 43);
             this.pnl2.Name = "pnl2";
             this.pnl2.Padding = new System.Windows.Forms.Padding(1);
-            this.pnl2.Size = new System.Drawing.Size(369, 354);
+            this.pnl2.Size = new System.Drawing.Size(371, 354);
             this.pnl2.TabIndex = 3;
             // 
             // pnl1
@@ -264,7 +264,7 @@
             this.pnl1.Location = new System.Drawing.Point(3, 17);
             this.pnl1.Name = "pnl1";
             this.pnl1.Padding = new System.Windows.Forms.Padding(5, 1, 1, 1);
-            this.pnl1.Size = new System.Drawing.Size(369, 26);
+            this.pnl1.Size = new System.Drawing.Size(371, 26);
             this.pnl1.TabIndex = 2;
             // 
             // cbx
@@ -273,7 +273,7 @@
             this.cbx.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbx.Location = new System.Drawing.Point(5, 1);
             this.cbx.Name = "cbx";
-            this.cbx.Size = new System.Drawing.Size(363, 24);
+            this.cbx.Size = new System.Drawing.Size(365, 24);
             this.cbx.TabIndex = 1;
             this.cbx.Text = "全选";
             this.cbx.UseVisualStyleBackColor = true;
@@ -285,7 +285,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gpx);
             this.Name = "PrivilegeCard";
-            this.Size = new System.Drawing.Size(375, 400);
+            this.Size = new System.Drawing.Size(377, 400);
             ((System.ComponentModel.ISupportInitialize)(this.fp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fpSheet)).EndInit();
             this.gpx.ResumeLayout(false);
