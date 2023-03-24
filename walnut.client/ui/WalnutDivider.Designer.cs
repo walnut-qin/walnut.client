@@ -1,6 +1,6 @@
-﻿namespace walnut.client.control
+﻿namespace walnut.client.ui
 {
-    partial class SelectUser
+    partial class WalnutDivider
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -28,30 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbx = new System.Windows.Forms.ComboBox();
+            this.label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // cbx
+            // label
             // 
-            this.cbx.FormattingEnabled = true;
-            this.cbx.Location = new System.Drawing.Point(3, 3);
-            this.cbx.Name = "cbx";
-            this.cbx.Size = new System.Drawing.Size(121, 20);
-            this.cbx.TabIndex = 0;
+            this.label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label.Location = new System.Drawing.Point(0, 9);
+            this.label.Margin = new System.Windows.Forms.Padding(0);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(150, 2);
+            this.label.TabIndex = 0;
+            this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SelectUser
+            // WalnutDivider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cbx);
-            this.Name = "SelectUser";
-            this.Size = new System.Drawing.Size(127, 26);
+            this.Controls.Add(this.label);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "WalnutDivider";
+            this.Padding = new System.Windows.Forms.Padding(0, 9, 0, 9);
+            this.Size = new System.Drawing.Size(150, 20);
+            this.Load += new System.EventHandler(this.WalnutDivider_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cbx;
+        private System.Windows.Forms.Label label;
     }
 }

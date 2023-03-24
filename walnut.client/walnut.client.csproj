@@ -50,14 +50,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="control\SelectUser.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="control\SelectUser.Designer.cs">
-      <DependentUpon>SelectUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="net\RestTemplate.cs" />
     <Compile Include="net\RspWrapper.cs" />
+    <Compile Include="ui\WalnutDivider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\WalnutDivider.Designer.cs">
+      <DependentUpon>WalnutDivider.cs</DependentUpon>
+    </Compile>
     <Compile Include="util\collection\Dictionary.cs" />
     <Compile Include="util\EnumUtil.cs" />
     <Compile Include="util\ObjectUtil.cs" />
@@ -68,8 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="control\SelectUser.resx">
-      <DependentUpon>SelectUser.cs</DependentUpon>
+    <EmbeddedResource Include="ui\WalnutDivider.resx">
+      <DependentUpon>WalnutDivider.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
