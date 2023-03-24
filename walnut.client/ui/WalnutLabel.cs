@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace walnut.client.ui
 {
-    public partial class WalnutLabel : walnut.client.ui.helper.PairControl
+    public partial class WalnutLabel : walnut.client.ui.helper.LabelContainer
     {
         public WalnutLabel()
         {

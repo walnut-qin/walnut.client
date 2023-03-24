@@ -1,6 +1,6 @@
 ﻿namespace walnut.client.ui.helper
 {
-    partial class PairControl
+    partial class LabelContainer
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -37,6 +37,7 @@
             // splitContainer
             // 
             this.splitContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer.IsSplitterFixed = true;
             this.splitContainer.Location = new System.Drawing.Point(0, 0);
             this.splitContainer.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer.Name = "splitContainer";
@@ -45,8 +46,12 @@
             // 
             this.splitContainer.Panel1.Controls.Add(this.label);
             this.splitContainer.Panel1.Padding = new System.Windows.Forms.Padding(5);
+            // 
+            // splitContainer.Panel2
+            // 
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
             this.splitContainer.Size = new System.Drawing.Size(250, 50);
-            this.splitContainer.SplitterDistance = 80;
+            this.splitContainer.SplitterDistance = 100;
             this.splitContainer.SplitterWidth = 5;
             this.splitContainer.TabIndex = 0;
             // 
@@ -56,7 +61,7 @@
             this.label.Location = new System.Drawing.Point(5, 5);
             this.label.Margin = new System.Windows.Forms.Padding(0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(70, 40);
+            this.label.Size = new System.Drawing.Size(90, 40);
             this.label.TabIndex = 0;
             this.label.Text = "label";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

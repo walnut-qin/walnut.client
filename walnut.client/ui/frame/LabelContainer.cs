@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace walnut.form.surgery.privilege
+namespace walnut.client.ui.helper
 {
-    public partial class MainForm : UserControl
+    public partial class LabelContainer : UserControl
     {
-        public MainForm()
+        public LabelContainer()
         {
             InitializeComponent();
         }
+
+        public String Title { get { return this.label.Text; } set { this.label.Text = value; } }
     }
 }

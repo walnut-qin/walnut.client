@@ -26,7 +26,7 @@ namespace walnut.client.ui
             var offset = this.Size.Height - this.label.Size.Height;
             if (offset > 0)
             {
-                this.Padding = new Padding(0, offset / 2, 0, offset / 2);
+                this.Padding = new Padding(this.Padding.Left, offset / 2, this.Padding.Right, offset / 2);
             }
         }
     }

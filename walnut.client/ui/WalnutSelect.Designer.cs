@@ -1,6 +1,6 @@
 ﻿namespace walnut.client.ui
 {
-    partial class WalnutLabel
+    partial class WalnutSelect
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.content = new System.Windows.Forms.Label();
+            this.comboBox = new System.Windows.Forms.ComboBox();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
@@ -38,23 +38,25 @@
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.content);
-            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.splitContainer.Panel2.Controls.Add(this.comboBox);
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5, 15, 5, 15);
             // 
-            // content
+            // comboBox
             // 
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(5, 5);
-            this.content.Margin = new System.Windows.Forms.Padding(0);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(155, 40);
-            this.content.TabIndex = 0;
-            this.content.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Location = new System.Drawing.Point(5, 15);
+            this.comboBox.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(155, 20);
+            this.comboBox.TabIndex = 0;
             // 
-            // WalnutLabel
+            // WalnutComboBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.Name = "WalnutLabel";
+            this.Name = "WalnutComboBox";
+            this.Load += new System.EventHandler(this.WalnutComboBox_Load);
             this.splitContainer.Panel2.ResumeLayout(false);
             this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -63,6 +65,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label content;
+        private System.Windows.Forms.ComboBox comboBox;
     }
 }

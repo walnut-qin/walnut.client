@@ -1,6 +1,6 @@
 ﻿namespace walnut.client.ui
 {
-    partial class WalnutLabel
+    partial class WalnutInput
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.content = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
@@ -38,24 +38,26 @@
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.content);
-            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.splitContainer.Panel2.Controls.Add(this.textBox);
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5, 14, 5, 15);
             // 
-            // content
+            // textBox
             // 
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(5, 5);
-            this.content.Margin = new System.Windows.Forms.Padding(0);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(155, 40);
-            this.content.TabIndex = 0;
-            this.content.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox.Location = new System.Drawing.Point(5, 14);
+            this.textBox.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(135, 21);
+            this.textBox.TabIndex = 0;
             // 
-            // WalnutLabel
+            // WalnutInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.Name = "WalnutLabel";
+            this.Name = "WalnutInput";
+            this.Load += new System.EventHandler(this.WalnutInput_Load);
             this.splitContainer.Panel2.ResumeLayout(false);
+            this.splitContainer.Panel2.PerformLayout();
             this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -63,6 +65,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label content;
+        protected System.Windows.Forms.TextBox textBox;
     }
 }

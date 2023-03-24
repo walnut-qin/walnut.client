@@ -1,6 +1,6 @@
 ﻿namespace walnut.client.ui
 {
-    partial class WalnutLabel
+    partial class WalnutDatePicker
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.content = new System.Windows.Forms.Label();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
@@ -38,23 +38,24 @@
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.content);
-            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.splitContainer.Panel2.Controls.Add(this.dateTimePicker);
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5, 14, 5, 15);
             // 
-            // content
+            // dateTimePicker
             // 
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(5, 5);
-            this.content.Margin = new System.Windows.Forms.Padding(0);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(155, 40);
-            this.content.TabIndex = 0;
-            this.content.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dateTimePicker.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker.Location = new System.Drawing.Point(5, 14);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(155, 21);
+            this.dateTimePicker.TabIndex = 0;
             // 
-            // WalnutLabel
+            // WalnutDatePicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.Name = "WalnutLabel";
+            this.Name = "WalnutDatePicker";
+            this.Load += new System.EventHandler(this.WalnutDatePicker_Load);
             this.splitContainer.Panel2.ResumeLayout(false);
             this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -63,6 +64,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label content;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }

@@ -52,11 +52,41 @@
   <ItemGroup>
     <Compile Include="net\RestTemplate.cs" />
     <Compile Include="net\RspWrapper.cs" />
-    <Compile Include="ui\helper\PairControl.cs">
+    <Compile Include="ui\frame\LabelContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ui\helper\PairControl.Designer.cs">
-      <DependentUpon>PairControl.cs</DependentUpon>
+    <Compile Include="ui\frame\LabelContainer.Designer.cs">
+      <DependentUpon>LabelContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\frame\Switch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\frame\Switch.Designer.cs">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\WalnutDatePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\WalnutDatePicker.Designer.cs">
+      <DependentUpon>WalnutDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\WalnutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\WalnutDialog.Designer.cs">
+      <DependentUpon>WalnutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\WalnutInputWithDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\WalnutInputWithDialog.Designer.cs">
+      <DependentUpon>WalnutInputWithDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\WalnutSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\WalnutSelect.Designer.cs">
+      <DependentUpon>WalnutSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="ui\WalnutDivider.cs">
       <SubType>UserControl</SubType>
@@ -64,11 +94,23 @@
     <Compile Include="ui\WalnutDivider.Designer.cs">
       <DependentUpon>WalnutDivider.cs</DependentUpon>
     </Compile>
+    <Compile Include="ui\WalnutInput.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\WalnutInput.Designer.cs">
+      <DependentUpon>WalnutInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="ui\WalnutLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ui\WalnutLabel.Designer.cs">
       <DependentUpon>WalnutLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\WalnutSwitch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\WalnutSwitch.Designer.cs">
+      <DependentUpon>WalnutSwitch.cs</DependentUpon>
     </Compile>
     <Compile Include="util\collection\Dictionary.cs" />
     <Compile Include="util\EnumUtil.cs" />
@@ -80,14 +122,35 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ui\helper\PairControl.resx">
-      <DependentUpon>PairControl.cs</DependentUpon>
+    <EmbeddedResource Include="ui\frame\LabelContainer.resx">
+      <DependentUpon>LabelContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\frame\Switch.resx">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\WalnutDatePicker.resx">
+      <DependentUpon>WalnutDatePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\WalnutDialog.resx">
+      <DependentUpon>WalnutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\WalnutInputWithDialog.resx">
+      <DependentUpon>WalnutInputWithDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\WalnutSelect.resx">
+      <DependentUpon>WalnutSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ui\WalnutDivider.resx">
       <DependentUpon>WalnutDivider.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ui\WalnutInput.resx">
+      <DependentUpon>WalnutInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ui\WalnutLabel.resx">
       <DependentUpon>WalnutLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\WalnutSwitch.resx">
+      <DependentUpon>WalnutSwitch.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

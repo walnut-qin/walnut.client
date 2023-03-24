@@ -1,6 +1,6 @@
 ﻿namespace walnut.client.ui
 {
-    partial class WalnutLabel
+    partial class WalnutInputWithDialog
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,41 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.content = new System.Windows.Forms.Label();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // textBox
+            // 
+            this.textBox.ReadOnly = true;
+            this.textBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox_KeyDown);
             // 
             // splitContainer
             // 
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.content);
-            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5, 14, 5, 14);
             // 
-            // content
-            // 
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(5, 5);
-            this.content.Margin = new System.Windows.Forms.Padding(0);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(155, 40);
-            this.content.TabIndex = 0;
-            this.content.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // WalnutLabel
+            // WalnutInputWithDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.Name = "WalnutLabel";
+            this.Name = "WalnutInputWithDialog";
             this.splitContainer.Panel2.ResumeLayout(false);
+            this.splitContainer.Panel2.PerformLayout();
             this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label content;
     }
 }

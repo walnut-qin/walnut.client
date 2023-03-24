@@ -1,6 +1,6 @@
 ﻿namespace walnut.client.ui
 {
-    partial class WalnutLabel
+    partial class WalnutSwitch
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.content = new System.Windows.Forms.Label();
+            this.toggleSwitch = new walnut.client.ui.helper.Switch();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.SuspendLayout();
@@ -38,23 +38,28 @@
             // 
             // splitContainer.Panel2
             // 
-            this.splitContainer.Panel2.Controls.Add(this.content);
-            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5);
+            this.splitContainer.Panel2.Controls.Add(this.toggleSwitch);
+            this.splitContainer.Panel2.Padding = new System.Windows.Forms.Padding(5, 13, 5, 13);
             // 
-            // content
+            // toggleSwitch
             // 
-            this.content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.content.Location = new System.Drawing.Point(5, 5);
-            this.content.Margin = new System.Windows.Forms.Padding(0);
-            this.content.Name = "content";
-            this.content.Size = new System.Drawing.Size(155, 40);
-            this.content.TabIndex = 0;
-            this.content.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toggleSwitch.Checked = false;
+            this.toggleSwitch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.toggleSwitch.FalseColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
+            this.toggleSwitch.FalseText = "否";
+            this.toggleSwitch.Location = new System.Drawing.Point(5, 13);
+            this.toggleSwitch.Name = "toggleSwitch";
+            this.toggleSwitch.Size = new System.Drawing.Size(60, 24);
+            this.toggleSwitch.SwitchType = walnut.client.ui.helper.Switch.SwitchTypeEnum.Ellipse;
+            this.toggleSwitch.TabIndex = 0;
+            this.toggleSwitch.TrueColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(163)))), ((int)(((byte)(169)))));
+            this.toggleSwitch.TrueText = "是";
             // 
-            // WalnutLabel
+            // WalnutSwitch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.Name = "WalnutLabel";
+            this.Name = "WalnutSwitch";
+            this.Load += new System.EventHandler(this.WalnutSwitch_Load);
             this.splitContainer.Panel2.ResumeLayout(false);
             this.splitContainer.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -63,6 +68,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Label content;
+        private helper.Switch toggleSwitch;
     }
 }
