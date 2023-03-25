@@ -21,7 +21,7 @@ namespace walnut.client.ui
         /// </summary>
         /// <param name="name">节点标识</param>
         /// <returns>族长</returns>
-        public WalnutTreeNode createPatriarchy(String name)
+        public WalnutTreeNode createPatriarchy()
         {
             return new WalnutTreeNode(this.treeView);
         }

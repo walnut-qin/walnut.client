@@ -36,6 +36,7 @@
             this.walnutDatePicker1 = new walnut.client.ui.WalnutDatePicker();
             this.walnutSwitch = new walnut.client.ui.WalnutSwitch();
             this.walnutInputWithDialog = new walnut.client.ui.WalnutInputWithDialog();
+            this.walnutTreeView1 = new walnut.client.ui.WalnutTreeView();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             this.tableLayoutPanel1.Controls.Add(this.walnutDatePicker1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.walnutSwitch, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.walnutInputWithDialog, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.walnutTreeView1, 3, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -76,7 +78,6 @@
             // 
             // walnutLabel
             // 
-            this.walnutLabel.Value = "标签测试";
             this.walnutLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutLabel.Location = new System.Drawing.Point(205, 5);
             this.walnutLabel.Margin = new System.Windows.Forms.Padding(5);
@@ -84,10 +85,10 @@
             this.walnutLabel.Size = new System.Drawing.Size(190, 102);
             this.walnutLabel.TabIndex = 1;
             this.walnutLabel.Title = "label";
+            this.walnutLabel.Value = "标签测试";
             // 
             // walnutComboBox
             // 
-            this.walnutComboBox.Value = "";
             this.walnutComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutComboBox.Location = new System.Drawing.Point(405, 5);
             this.walnutComboBox.Margin = new System.Windows.Forms.Padding(5);
@@ -95,10 +96,10 @@
             this.walnutComboBox.Size = new System.Drawing.Size(190, 102);
             this.walnutComboBox.TabIndex = 2;
             this.walnutComboBox.Title = "select";
+            this.walnutComboBox.Value = "";
             // 
             // walnutInput1
             // 
-            this.walnutInput1.Value = "";
             this.walnutInput1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutInput1.Location = new System.Drawing.Point(605, 5);
             this.walnutInput1.Margin = new System.Windows.Forms.Padding(5);
@@ -106,10 +107,10 @@
             this.walnutInput1.Size = new System.Drawing.Size(190, 102);
             this.walnutInput1.TabIndex = 3;
             this.walnutInput1.Title = "input";
+            this.walnutInput1.Value = "";
             // 
             // walnutDatePicker1
             // 
-            this.walnutDatePicker1.Value = new System.DateTime(2023, 3, 24, 14, 55, 27, 138);
             this.walnutDatePicker1.DateFormat = "yyyy-MM-dd";
             this.walnutDatePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutDatePicker1.Location = new System.Drawing.Point(5, 117);
@@ -118,6 +119,7 @@
             this.walnutDatePicker1.Size = new System.Drawing.Size(190, 102);
             this.walnutDatePicker1.TabIndex = 4;
             this.walnutDatePicker1.Title = "datePicker";
+            this.walnutDatePicker1.Value = new System.DateTime(2023, 3, 24, 14, 55, 27, 138);
             // 
             // walnutSwitch
             // 
@@ -137,7 +139,6 @@
             // 
             // walnutInputWithDialog
             // 
-            this.walnutInputWithDialog.Value = null;
             this.walnutInputWithDialog.Dialog = null;
             this.walnutInputWithDialog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutInputWithDialog.Location = new System.Drawing.Point(405, 117);
@@ -146,6 +147,16 @@
             this.walnutInputWithDialog.Size = new System.Drawing.Size(190, 102);
             this.walnutInputWithDialog.TabIndex = 6;
             this.walnutInputWithDialog.Title = "label";
+            this.walnutInputWithDialog.Value = null;
+            // 
+            // walnutTreeView1
+            // 
+            this.walnutTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.walnutTreeView1.Location = new System.Drawing.Point(605, 117);
+            this.walnutTreeView1.Margin = new System.Windows.Forms.Padding(5);
+            this.walnutTreeView1.Name = "walnutTreeView1";
+            this.walnutTreeView1.Size = new System.Drawing.Size(190, 102);
+            this.walnutTreeView1.TabIndex = 7;
             // 
             // Form
             // 
@@ -171,6 +182,7 @@
         private walnut.client.ui.WalnutDatePicker walnutDatePicker1;
         private walnut.client.ui.WalnutSwitch walnutSwitch;
         private walnut.client.ui.WalnutInputWithDialog walnutInputWithDialog;
+        private walnut.client.ui.WalnutTreeView walnutTreeView1;
     }
 }
 

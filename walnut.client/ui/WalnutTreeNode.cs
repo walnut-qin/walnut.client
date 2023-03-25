@@ -24,11 +24,6 @@ namespace walnut.client.ui
         private Dictionary<String, WalnutTreeNode> children;
 
         /// <summary>
-        /// 显示文本
-        /// </summary>
-        public String Text { get { return this.treeNode.Text; } set { this.treeNode.Text = value; } }
-
-        /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="genealogy">家谱</param>
@@ -43,6 +38,7 @@ namespace walnut.client.ui
 
             // 实体关联
             this.treeNode = new TreeNode();
+            genealogy.Nodes.Add(this.treeNode);
         }
 
         /// <summary>
@@ -71,7 +67,7 @@ namespace walnut.client.ui
         public WalnutTreeNode getChild(String name)
         {
             // 若署名孩子已存在，则无法创建
-            if (!this.children.ContainsKey(name))
+            if (name == null || !this.children.ContainsKey(name))
             {
                 return null;
             }
@@ -83,7 +79,7 @@ namespace walnut.client.ui
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public WalnutTreeNode createChild(String name)
+        public WalnutTreeNode createChild(String name = null)
         {
             // 若署名孩子已存在，则不再创建
             var child = this.getChild(name);
@@ -93,6 +89,10 @@ namespace walnut.client.ui
             }
 
             // 创建新孩子
+            if (name == null)
+            {
+                name = this.children.Count.ToString();
+            }
             child = new WalnutTreeNode(this);
             this.children.Add(name, child);
 
@@ -102,7 +102,7 @@ namespace walnut.client.ui
         /// <summary>
         /// 销毁某个孩子
         /// </summary>
-        public void destroyChild(String name)
+        public void removeChild(String name)
         {
             // 若署名孩子不存在，则不再销毁
             var child = this.getChild(name);
@@ -130,6 +130,17 @@ namespace walnut.client.ui
             // 断开与所有孩子的所有关联，销毁工作交给GC
             this.treeNode.Nodes.Clear();
             this.children.Clear();
+        }
+
+        /// <summary>
+        /// 设置文本
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public WalnutTreeNode setText(String text)
+        {
+            this.treeNode.Text = text;
+            return this;
         }
     }
 }
