@@ -6,58 +6,17 @@ using System.Windows.Forms;
 
 namespace walnut.client.ui
 {
-    public class WalnutTreeNode
+    public class WalnutTreeNode : TreeNode
     {
-        /// <summary>
-        /// 节点实体
-        /// </summary>
-        private TreeNode treeNode;
-
         /// <summary>
         /// 父节点
         /// </summary>
-        private WalnutTreeNode parent;
+        public WalnutTreeNode parent { get; set; } = null;
 
         /// <summary>
         /// 孩子节点
         /// </summary>
-        private Dictionary<String, WalnutTreeNode> children;
-
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        /// <param name="genealogy">家谱</param>
-        public WalnutTreeNode(TreeView genealogy)
-        {
-            // 若空，异常
-            if (genealogy == null) throw new Exception("WalnutTreeNode构造异常, genealogy为空");
-
-            // 挂载父子节点
-            this.parent = null;
-            this.children = new Dictionary<String, WalnutTreeNode>();
-
-            // 实体关联
-            this.treeNode = new TreeNode();
-            genealogy.Nodes.Add(this.treeNode);
-        }
-
-        /// <summary>
-        /// 构造函数
-        /// </summary>
-        /// <param name="parent">父节点</param>
-        public WalnutTreeNode(WalnutTreeNode parent)
-        {
-            // 若空，异常
-            if (parent == null) throw new Exception("WalnutTreeNode构造异常, parent为空");
-
-            // 挂载父子节点
-            this.parent = parent;
-            this.children = new Dictionary<String, WalnutTreeNode>();
-
-            // 实体关联
-            this.treeNode = new TreeNode();
-            parent.treeNode.Nodes.Add(this.treeNode);
-        }
+        public Dictionary<String, WalnutTreeNode> children { get; } = new Dictionary<string, WalnutTreeNode>();
 
         /// <summary>
         /// 找到指名的孩子
@@ -88,13 +47,17 @@ namespace walnut.client.ui
                 return child;
             }
 
-            // 创建新孩子
+            // 为匿名孩子取名
             if (name == null)
             {
-                name = this.children.Count.ToString();
+                name = String.Format("{0}-{1}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), this.children.Count.ToString());
             }
-            child = new WalnutTreeNode(this);
+
+            // 创建实体
+            child = new WalnutTreeNode();
+            child.parent = this;
             this.children.Add(name, child);
+            this.Nodes.Add(child);
 
             return child;
         }
@@ -112,8 +75,8 @@ namespace walnut.client.ui
             }
 
             // 若署名孩子存在，则断开与孩子的所有关联，销毁工作交给GC
-            this.treeNode.Nodes.Remove(child.treeNode);
             this.children.Remove(name);
+            this.Nodes.Remove(child);
         }
 
         /// <summary>
@@ -128,35 +91,8 @@ namespace walnut.client.ui
             }
 
             // 断开与所有孩子的所有关联，销毁工作交给GC
-            this.treeNode.Nodes.Clear();
             this.children.Clear();
-        }
-
-        /// <summary>
-        /// 设置文本
-        /// </summary>
-        /// <param name="text"></param>
-        /// <returns></returns>
-        public WalnutTreeNode setText(String text)
-        {
-            this.treeNode.Text = text;
-            return this;
-        }
-
-        /// <summary>
-        /// 展开孩子节点
-        /// </summary>
-        public void expand()
-        {
-            this.treeNode.Expand();
-        }
-
-        /// <summary>
-        /// 全展开
-        /// </summary>
-        public void expandAll()
-        {
-            this.treeNode.ExpandAll();
+            this.Nodes.Clear();
         }
     }
 }

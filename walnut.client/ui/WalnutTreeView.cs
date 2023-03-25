@@ -30,7 +30,13 @@ namespace walnut.client.ui
         /// <returns>族长</returns>
         public WalnutTreeNode createPatriarchy()
         {
-            return new WalnutTreeNode(this.treeView);
+            // 构造节点
+            var patriarchy = new WalnutTreeNode();
+
+            // 建立关联
+            this.treeView.Nodes.Add(patriarchy);
+
+            return patriarchy;
         }
     }
 }

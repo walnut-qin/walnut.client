@@ -23,10 +23,13 @@ namespace Tests
             this.walnutInputWithDialog.Dialog = new walnut.client.ui.WalnutDialog();
 
             // 创建族长
-            var root = this.walnutTreeView1.createPatriarchy().setText("root");
-            root.createChild().setText("node1").createChild().setText("node3");
-            root.createChild().setText("node2");
-            root.expand();
+            var root = this.walnutTreeView1.createPatriarchy();
+            root.Text = "根节点";
+            {
+                var child = root.createChild();
+                child.Text = "一级节点";
+            }
+            root.ExpandAll();
         }
     }
 }
