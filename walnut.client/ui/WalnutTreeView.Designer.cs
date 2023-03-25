@@ -40,6 +40,7 @@
             this.treeView.PathSeparator = "/";
             this.treeView.Size = new System.Drawing.Size(200, 300);
             this.treeView.TabIndex = 0;
+            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseDoubleClick);
             // 
             // WalnutTreeView
             // 

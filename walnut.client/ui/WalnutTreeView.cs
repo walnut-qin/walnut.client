@@ -16,6 +16,13 @@ namespace walnut.client.ui
             InitializeComponent();
         }
 
+        private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (this.NodeMouseDoubleClick != null) this.NodeMouseDoubleClick(sender, e);
+        }
+
+        public event TreeNodeMouseClickEventHandler NodeMouseDoubleClick;
+
         /// <summary>
         /// 创建族长节点
         /// </summary>
