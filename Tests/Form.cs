@@ -26,8 +26,7 @@ namespace Tests
             var root = this.walnutTreeView1.createPatriarchy().setText("root");
             root.createChild().setText("node1").createChild().setText("node3");
             root.createChild().setText("node2");
-
-            root.removeChild("0");
+            root.expand();
         }
     }
 }

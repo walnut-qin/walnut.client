@@ -142,5 +142,21 @@ namespace walnut.client.ui
             this.treeNode.Text = text;
             return this;
         }
+
+        /// <summary>
+        /// 展开孩子节点
+        /// </summary>
+        public void expand()
+        {
+            this.treeNode.Expand();
+        }
+
+        /// <summary>
+        /// 全展开
+        /// </summary>
+        public void expandAll()
+        {
+            this.treeNode.ExpandAll();
+        }
     }
 }
