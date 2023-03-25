@@ -16,15 +16,6 @@ namespace walnut.client.ui
             InitializeComponent();
         }
 
-        protected Object data = null;
-
-        public Object getDialogResult()
-        {
-            if (this.DialogResult != DialogResult.OK)
-            {
-                return null;
-            }
-            return this.data;
-        }
+        public Object Value { get; protected set; }
     }
 }

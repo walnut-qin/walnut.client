@@ -17,7 +17,19 @@ namespace walnut.client.ui
 
         public WalnutDialog Dialog { get; set; }
 
-        public Object Data { get; set; }
+        private Object m_Value;
+        public new Object Value
+        {
+            get
+            {
+                return this.m_Value;
+            }
+            set
+            {
+                this.m_Value = value;
+                base.Value = value == null ? String.Empty : value.ToString();
+            }
+        }
 
         private void textBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -33,8 +45,7 @@ namespace walnut.client.ui
                 {
                     return;
                 }
-                this.Data = this.Dialog.getDialogResult();
-                base.Content = this.Data.ToString();
+                this.Value = this.Dialog.Value;
             }
         }
     }

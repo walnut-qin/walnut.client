@@ -76,7 +76,7 @@
             // 
             // walnutLabel
             // 
-            this.walnutLabel.Content = "标签测试";
+            this.walnutLabel.Value = "标签测试";
             this.walnutLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutLabel.Location = new System.Drawing.Point(205, 5);
             this.walnutLabel.Margin = new System.Windows.Forms.Padding(5);
@@ -87,7 +87,7 @@
             // 
             // walnutComboBox
             // 
-            this.walnutComboBox.Content = "";
+            this.walnutComboBox.Value = "";
             this.walnutComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutComboBox.Location = new System.Drawing.Point(405, 5);
             this.walnutComboBox.Margin = new System.Windows.Forms.Padding(5);
@@ -98,7 +98,7 @@
             // 
             // walnutInput1
             // 
-            this.walnutInput1.Content = "";
+            this.walnutInput1.Value = "";
             this.walnutInput1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutInput1.Location = new System.Drawing.Point(605, 5);
             this.walnutInput1.Margin = new System.Windows.Forms.Padding(5);
@@ -109,7 +109,7 @@
             // 
             // walnutDatePicker1
             // 
-            this.walnutDatePicker1.Content = new System.DateTime(2023, 3, 24, 14, 55, 27, 138);
+            this.walnutDatePicker1.Value = new System.DateTime(2023, 3, 24, 14, 55, 27, 138);
             this.walnutDatePicker1.DateFormat = "yyyy-MM-dd";
             this.walnutDatePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutDatePicker1.Location = new System.Drawing.Point(5, 117);
@@ -137,8 +137,7 @@
             // 
             // walnutInputWithDialog
             // 
-            this.walnutInputWithDialog.Content = "";
-            this.walnutInputWithDialog.Data = null;
+            this.walnutInputWithDialog.Value = null;
             this.walnutInputWithDialog.Dialog = null;
             this.walnutInputWithDialog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.walnutInputWithDialog.Location = new System.Drawing.Point(405, 117);

@@ -29,13 +29,13 @@ namespace walnut.client.ui
             }
         }
 
-        public String Content { get { return this.comboBox.Text; } set { this.comboBox.Text = value; } }
+        public String Value { get { return this.comboBox.Text; } set { this.comboBox.Text = value; } }
 
         public void setSelectedItems(List<String> items, String defaultValue)
         {
             this.comboBox.Items.Clear();
             this.comboBox.Items.AddRange(items.ToArray());
-            this.Content = defaultValue;
+            this.Value = defaultValue;
         }
     }
 }

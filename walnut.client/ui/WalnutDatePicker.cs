@@ -31,6 +31,6 @@ namespace walnut.client.ui
 
         public String DateFormat { get { return this.dateTimePicker.CustomFormat; } set { this.dateTimePicker.CustomFormat = value; } }
 
-        public DateTime Content { get { return this.dateTimePicker.Value; } set { this.dateTimePicker.Value = value; } }
+        public DateTime Value { get { return this.dateTimePicker.Value; } set { this.dateTimePicker.Value = value; } }
     }
 }

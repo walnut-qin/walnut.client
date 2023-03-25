@@ -29,6 +29,6 @@ namespace walnut.client.ui
             }
         }
 
-        public String Content { get { return this.textBox.Text; } set { this.textBox.Text = value; } }
+        public String Value { get { return this.textBox.Text; } set { this.textBox.Text = value; } }
     }
 }

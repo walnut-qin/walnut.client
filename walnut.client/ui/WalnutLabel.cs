@@ -15,6 +15,6 @@ namespace walnut.client.ui
             InitializeComponent();
         }
 
-        public String Content { get { return this.content.Text; } set { this.content.Text = value; } }
+        public String Value { get { return this.content.Text; } set { this.content.Text = value; } }
     }
 }
