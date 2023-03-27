@@ -28,7 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // WalnutTreeView
+            // 
+            this.LineColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
