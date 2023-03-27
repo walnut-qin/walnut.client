@@ -159,9 +159,6 @@
     <EmbeddedResource Include="ui\WalnutSwitch.resx">
       <DependentUpon>WalnutSwitch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ui\WalnutTreeView.resx">
-      <DependentUpon>WalnutTreeView.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
