@@ -23,7 +23,7 @@ namespace Tests
             this.walnutInputWithDialog.Dialog = new walnut.client.ui.WalnutDialog();
 
             // 创建族长
-            var root = this.walnutTreeView1.createPatriarchy();
+            var root = this.walnutTreeView1.createChild();
             root.Text = "根节点";
             {
                 var child = root.createChild();

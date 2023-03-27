@@ -152,10 +152,9 @@
             // walnutTreeView1
             // 
             this.walnutTreeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.walnutTreeView1.Location = new System.Drawing.Point(605, 117);
-            this.walnutTreeView1.Margin = new System.Windows.Forms.Padding(5);
+            this.walnutTreeView1.Location = new System.Drawing.Point(603, 115);
             this.walnutTreeView1.Name = "walnutTreeView1";
-            this.walnutTreeView1.Size = new System.Drawing.Size(190, 102);
+            this.walnutTreeView1.Size = new System.Drawing.Size(194, 106);
             this.walnutTreeView1.TabIndex = 7;
             // 
             // Form

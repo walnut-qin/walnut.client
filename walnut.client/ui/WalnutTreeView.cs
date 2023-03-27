@@ -109,5 +109,17 @@ namespace walnut.client.ui
             this.children.Clear();
             this.Nodes.Clear();
         }
+
+        /// <summary>
+        /// 孩子节点的foreach函数
+        /// </summary>
+        /// <param name="action"></param>
+        public void foreachChild(Action<WalnutTreeNode> action)
+        {
+            foreach (var item in this.children.Values)
+            {
+                action(item);
+            }
+        }
     }
 }
