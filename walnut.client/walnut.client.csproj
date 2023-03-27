@@ -114,7 +114,7 @@
       <DependentUpon>WalnutSwitch.cs</DependentUpon>
     </Compile>
     <Compile Include="ui\WalnutTreeView.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ui\WalnutTreeView.Designer.cs">
       <DependentUpon>WalnutTreeView.cs</DependentUpon>
