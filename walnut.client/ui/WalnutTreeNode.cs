@@ -34,6 +34,20 @@ namespace walnut.client.ui
         }
 
         /// <summary>
+        /// 找到指名的孩子
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public WalnutTreeNode getChild(int index)
+        {
+            if (index < 0 || index >= this.Nodes.Count)
+            {
+                return null;
+            }
+            return this.Nodes[index] as WalnutTreeNode;
+        }
+
+        /// <summary>
         /// 造孩子
         /// </summary>
         /// <param name="name"></param>
