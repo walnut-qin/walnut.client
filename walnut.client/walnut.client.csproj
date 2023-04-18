@@ -64,6 +64,7 @@
     <Compile Include="ui\frame\Switch.Designer.cs">
       <DependentUpon>Switch.cs</DependentUpon>
     </Compile>
+    <Compile Include="ui\WalnutDialogResult.cs" />
     <Compile Include="ui\WalnutTreeNode.cs" />
     <Compile Include="ui\WalnutDatePicker.cs">
       <SubType>UserControl</SubType>
