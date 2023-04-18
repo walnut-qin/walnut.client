@@ -16,6 +16,6 @@ namespace walnut.client.ui
             InitializeComponent();
         }
 
-        public Object Value { get; protected set; }
+        public WalnutDialogResult walnutDialogResult { get; protected set; }
     }
 }

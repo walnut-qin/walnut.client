@@ -17,19 +17,7 @@ namespace walnut.client.ui
 
         public WalnutDialog Dialog { get; set; }
 
-        private Object m_Value;
-        public new Object Value
-        {
-            get
-            {
-                return this.m_Value;
-            }
-            set
-            {
-                this.m_Value = value;
-                base.Value = value == null ? String.Empty : value.ToString();
-            }
-        }
+        public new Object Value { get; private set; }
 
         private void textBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -45,7 +33,10 @@ namespace walnut.client.ui
                 {
                     return;
                 }
-                this.Value = this.Dialog.Value;
+
+                // 设置值
+                base.Value = this.Dialog.walnutDialogResult.mask;
+                this.Value = this.Dialog.walnutDialogResult.result;
             }
         }
     }
