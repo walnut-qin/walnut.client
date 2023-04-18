@@ -147,7 +147,6 @@
             this.walnutInputWithDialog.Size = new System.Drawing.Size(190, 102);
             this.walnutInputWithDialog.TabIndex = 6;
             this.walnutInputWithDialog.Title = "label";
-            this.walnutInputWithDialog.Value = null;
             // 
             // walnutTreeView1
             // 
